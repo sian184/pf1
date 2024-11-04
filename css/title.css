@@ -1,0 +1,65 @@
+div#title{
+  height: 100%;
+  background-image: url(https://images.unsplash.com/photo-1641958308842-8bfb108a0b57?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-position: center;
+  min-height: 700px;
+}
+div#title::after{
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+  position: absolute;
+  bottom: 60px;
+  left: calc(50% - 20px);
+  transform: rotate(135deg);
+  animation-name: updown; /*  애니메이션 이름  */
+  animation-duration: 1s;  /*  애니메이션 시간  */
+  animation-iteration-count: 3; /*  애니메이션 횟수  */
+  animation-direction: alternate; /*  애니메이션 방향  */
+}
+@keyframes updown{
+  from{ /*  시작 */
+    transform: translateY(0px) rotate(135deg);
+  }
+  to{ /*  끝  */
+    transform: translateY(20px) rotate(135deg);
+  }
+  }
+div#title h2{
+  color: white;
+}
+div#title h2 span{
+  line-height: 1.4;
+  animation-name: titleup;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+div#title h2 span.s2{
+  animation-delay: 1s;
+  opacity: 0;
+}
+
+@keyframes titleup{
+  0%{
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  50%{
+    
+  }
+  100%{
+    transform: translateY(0px);
+    opacity: 1;
+
+  }
+}
+div#title div.wrap{
+  width: 1440px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
